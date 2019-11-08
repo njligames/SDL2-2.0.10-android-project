@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Nov 08 14:24:15 EST 2019
+#Fri Nov 08 15:03:22 EST 2019
 4.path=lib/arm64-v8a/libmain.so
 8.set=NATIVE_RESOURCE
 6.path=lib/armeabi-v7a/libhidapi.so

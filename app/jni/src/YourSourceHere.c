@@ -1,5 +1,5 @@
 #include "SDL.h"
-#include "SDL_image.h"
+//#include "SDL_image.h"
 
 /* XPM */
 static char * icon_xpm[] = {
@@ -46,13 +46,13 @@ int main(int argc, char *argv[])
     return(2);
   }
 
-   surface = IMG_ReadXPMFromArray(icon_xpm);
-   texture = SDL_CreateTextureFromSurface(renderer, surface);
-   if (!texture) {
-     SDL_LogError(SDL_LOG_CATEGORY_APPLICATION,
-         "Couldn't load texture: %s", SDL_GetError());
-     return(2);
-   }
+//   surface = IMG_ReadXPMFromArray(icon_xpm);
+//   texture = SDL_CreateTextureFromSurface(renderer, surface);
+//   if (!texture) {
+//     SDL_LogError(SDL_LOG_CATEGORY_APPLICATION,
+//         "Couldn't load texture: %s", SDL_GetError());
+//     return(2);
+//   }
   SDL_SetWindowSize(window, 800, 480);
 
   done = 0;
@@ -61,11 +61,11 @@ int main(int argc, char *argv[])
       if (event.type == SDL_QUIT)
         done = 1;
     }
-     SDL_RenderCopy(renderer, texture, NULL, NULL);
+//     SDL_RenderCopy(renderer, texture, NULL, NULL);
     SDL_RenderPresent(renderer);
     SDL_Delay(100);
   }
-   SDL_DestroyTexture(texture);
+//   SDL_DestroyTexture(texture);
 
   SDL_Quit();
   return(0);
